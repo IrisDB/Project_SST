@@ -13,3 +13,4 @@ This repository contains
 -this README file
 -a powerpoint presentation that we will present 20 January 2017
 -the file "thegradeideserveis.mb" including some explanation on what i did in Github
+-the file "Project_Plan.txt"
