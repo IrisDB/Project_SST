@@ -1,1 +1,83 @@
+This is the file in which I will explain what I did in the Github.
+
+First of all I went to the website gidhub.com to create an account. 
+
+I went to https://github.com/Lumphie/Fairytale_test and clicked on "Issues". After that I created a new issue to ask Kees if I could commit.
+By e-mail I received a message that Kees did not accept my request. After that I received an e-mail with a request to commit. 
+Via the e-mail I confirmed my commitment in the Fairy tale and in Github I closed the issue.
+
+Next. I went into my Linux terminal.
+Commands: 
+git clone https://github.com/Lumphie/Fairytale_test
+ls 
+cd Fairytale_test
+ls
+nano Part2.txt
+# Changed something in the text
+#ctrl X, save
+git add --all :/
+git commit -m "" #some text inbetween the ""
+git push
+
+Then I got this:
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behaviour now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': IrisDB
+Password for 'https://IrisDB@github.com': 
+To https://github.com/Lumphie/Fairytale_test
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Lumphie/Fairytale_test'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+#En of "this
+
+
+To solve this, I entered the command
+git pull
+#Output:
+remote: Counting objects: 30, done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 30 (delta 17), reused 30 (delta 17), pack-reused 0
+Unpacking objects: 100% (30/30), done.
+From https://github.com/Lumphie/Fairytale_test
+   113c4bc..e4b8e30  master     -> origin/master
+Auto-merging Part2.txt
+Merge made by the 'recursive' strategy.
+ Part1.txt  |  8 +++++++-
+ Part1.txt~ | 21 +++++++++++++++++----
+ Part2.txt  | 23 ++++++++++++-----------
+ 3 files changed, 36 insertions(+), 16 deletions(-)
+#End of output.
+
+At some point a screen appeard (in the terminal), because there was a merge conflict.
+In this screen I typed "i" (=insert) followed by some text.
+After I finished typing my text, I typed <esc> ":wq" to close the screen
+
+Then I tried "git push" again.
+The steps from "git pull" until "git push" are repeated untill there is no longer a failure in pushing the edited file back to gidhub.
+
+
+
 
